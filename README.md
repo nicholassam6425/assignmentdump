@@ -1,2 +1,4 @@
 # assignmentdump
 tryna free up space on my computer
+
+i cant stop you from copy pasting shit, but just know this is literally publically available. you CAN literally just google search code from this repo and find it.
