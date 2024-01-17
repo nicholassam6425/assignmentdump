@@ -1,0 +1,14 @@
+{
+"Marks": [
+{"student": "Maria", "AI": 95, "DB": 77, "CG": 31, "ITP": 97, "LIT": 45},
+{"student": "Sam", "AI": 85, "DB": 37, "CG": 39, "ITP": 45, "LIT": 55},
+{"student": "Rinki", "AI": 5, "DB": 64, "CG": 93, "ITP": 66, "LIT": 89},
+{"student": "Tom", "AI": 45, "DB": 99, "CG": 53, "ITP": 84, "LIT": 91},
+{"student": "Jaffar", "AI": 65, "DB": 45, "CG": 83, "ITP": 3, "LIT": 93},
+{"student": "Jacob", "AI": 75, "DB": 23, "CG": 83, "ITP": 15, "LIT": 95},
+{"student": "Eva", "AI": 55, "DB": 87, "CG": 53, "ITP": 23, "LIT": 96},
+{"student": "Chen", "AI": 15, "DB": 65, "CG": 3, "ITP": 99, "LIT": 97},
+{"student": "Mary", "AI": 15, "DB": 77, "CG": 30, "ITP": 100, "LIT": 98}
+]
+}
+
