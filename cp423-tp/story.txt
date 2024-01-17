@@ -1,0 +1,22 @@
+In modern developments, it can be very difficult for an individual to find an occupation on the job market which is best suitable for their given skills and experience. 
+Some of the issues that people face while job-hunting often include being shown jobs that they are either underqualified for, overqualified for, or ones that do not match their field of interest. 
+As a result of this, a model that we propose is a search engine that finds the most optimal and best-suited job placements for an individual, regarding their skills, experience, and interests. 
+
+
+Starting off, this search engine model will run on job-networking websites such as indeed, LinkedIn, Glassdoor, etc., while utilizing indexing user profiles. 
+This technique would feature an inverted index with terms such as skills, job titles, workplaces, degrees/diplomas, location, etc., which would point to corresponding user profiles which contain these terms. 
+Complimentary to this indexing scheme, this search engine model will implement a modified process of crawling through user profiles. 
+In regular practice, website crawlers crawl between webpages using backlinks, though this model’s modified-crawler would crawl between job profiles of users’ with the use of similar job experiences, similar degrees at schools, or whatever similarities between index terms. 
+Additionally, the importance of these indexed terms will be computed using the TF-IDF (Term Frequency - Inverse Document Frequency), in order to link between user profiles which have similar goals and interests, ultimately recommending the experiences of these linked profiles to one another. 
+In addition, the model will also implement features such as parsing, stopping, and stemming text data on user profiles, ultimately making the data easier to read, categorize, and identify with data on other user profiles. 
+
+
+Furthermore, not only will the engine recommend experiences of similar profiles to one another, but it will provide a feature of job networking. Evident on websites such as LinkedIn, networking is a key aspect of growing your profile to increase opportunities, therefore the platform allows users to befriend and communicate with each other. 
+As a result, when this search engine model finds connections and similarities between user profiles, it will create clusters of these users with similarities, and recommend profiles within clusters for networking.
+
+
+Lastly, this search engine model will implement the use of a formula similar to PageRank, but modified to be JobRank. The PageRank formula has that: PR(u) =  ΣvEBu  PR(v)/|Lv|, where Bu is the set of links that point to page u, and Lv is the number of outgoing links from page v.
+Though JobRank has that: JR(u) =  ΣvEBu  JR(v)/|Lv|, where u is a job, Bu is the set of user profiles that include job u as a past experience, while Lv is the number of other past experiences on user profile v. In theory, this should held determine the importance of a job on a user’s profile.
+
+
+In conclusion, finding jobs using online job marketing can be troublesome, as one may repeatedly come across jobs which may not suit their qualifications, or their field of interest. As a result, the provided search engine model utilizes many concepts of search engine optimization in order to make job hunting a more convenient process.
