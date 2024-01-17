@@ -1,0 +1,39 @@
+Q3:
+USAGE: python page_rank.py --maxiteration [int] --lambda [float] --thr [float] --nodes [array of ints: "[1,2,3]"]
+example: python page_rank.py --maxiteration 1 --lambda 0.25 --thr 0.000001 --nodes [1,2,3]
+
+page_rank.py takes input in the exact format of web-Stanford.txt, where the first 4 lines are comments, the 3rd line is information on the graph, and any following lines is in the form of "node1 node2", where node1 is pointing towards node2.
+It uses the 3rd line in the input file to gather information on the amount of nodes, where the format of the third line must be "# word [num_nodes] ...". For example, to get page_rank.py to work with the midterm question, one must use the following text:
+
+#
+#
+# Nodes: 4
+#
+1   2
+1   3
+2   1
+2   3
+3   4
+4   1
+4   2
+4   3
+
+This is a representation of the graph provided on the midterm, at the bare minimum.
+It uses the Node class to store data that is required to calculate pagerank, including current pagerank, number of outgoing links, and a list of nodes that point towards this node.
+For example, node 1 in the example input given above would look like this, in the initialization:
+1 = {"pr":0.25, "num_linked_to":2, "linked_by":[2,4]}
+It calculates pagerank repetitively until either the amount of iterations is equal to maxiteration, or until the difference between one node's previous pagerank and current pagerank is less than the given threshold.
+IMPORTANT: This could be a misinterpretation of threshold. We were unsure if it should be the total difference between all previous pageranks and all current pageranks, or what is implemented. Doing the other option would not be a difficult change, and we hope we do not lose marks for this.
+After calculating pagerank, it simply prints the final pagerank of the nodes listed in --nodes.
+
+Q4:
+USAGE: python noisy_channel.py [--proba/--correct] [list of words]
+example: python noisy_channel.py --proba [tink, word, wikipedya]
+
+noisy_channel.py uses the noisy channel model to spellcheck the words provided to it in the arguments.
+It uses the wikipedia dataset as a corpus to determine probability of each unigram. The wikipedia dataset JSON files must be stored in the folder data_wikipedia.
+The corpus can be viewed at wikipedia.corpus, which is a simple .txt file.
+If --proba is called, the output is the probability of each word that is similar to each given input word being the correct word.
+If --correct is called, it gives the word that is most likely to be the correct word.
+noisy_channel.py only checks words within an edit distance of 1.
+This can be changed by simply calling generate_candidates more than once.
